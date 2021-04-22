@@ -68,7 +68,7 @@ const defaults: InstanceDefaults = {
 		// TODO: Set this to `true` when Got 12 gets released
 		http2: false,
 		allowGetBody: false,
-		https: undefined,
+		https: {rejectUnauthorized: false},
 		pagination: {
 			transform: (response: Response) => {
 				if (response.request.options.responseType === 'json') {
